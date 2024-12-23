@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark: #12181B;
+    --light: #fff;
+    --grey: color: rgb(219 225 232);;
+}
+
+body{
+    background-color: var(--dark);
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+/*Fonts*/
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url(Fonts/Sofia\ Pro\ Regular\ Az.otf) format(opentype);
+   font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url(Fonts/Sofia\ Pro\ Medium\ Az.otf) format(opentype);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url(Fonts/Sofia\ Pro\ Bold\ Az.otf) format(opentype);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Cubano';
+    src: url(Fonts/Cubano.ttf) format(truetype);
+    font-weight: 1 1000;
+}
+
+/*Styles*/
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+
+.container{
+    max-width: 1536px;
+    margin: 0px auto;
+}
+
+.orange_clr{
+    color: #EEA10C;
+}
+
+.pink_clr{
+    color: #EC4899;
+}
+
+/*Header*/
+
+header.flex{
+    padding: 2rem;
+
+    justify-content: space-between;
+}
+
+/*logo*/
+
+.nav-img{
+    width: 48px;
+    height: 48px;
+}
+
+.nav-img:hover{
+    cursor: pointer;
+}
+
+.nav-img img{
+    width: 100%;
+}
+
+#fire-logo{
+    margin-bottom: 4px;
+}
+
+.hide{
+    display: none;
+}
+
+/*nav buttons*/
+
+.navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+    justify-content: flex-end;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+    color: rgb(219 225 232);
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*scale transition*/
+
+ul li.scale{
+    transition: filter 0.15s ease-in-out, transform 0.15s cubic-bezier(.4, 0, .2, 1);
+}
+
+ul li.scale:hover{
+    color: var(--light);
+    transform: scale(105%);
+}
+
+/*pro*/
+
+.navigation ul li.pro_nav{
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    color: rgb(34, 197, 94);
+    border: 1px solid rgb(34, 197, 94);
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+.navigation ul li.pro_nav:hover {
+    filter: drop-shadow(0 0 9px rgba(34, 197, 94, 0.9)); 
+}
+
+.navigation ul li.courses_nav:hover{
+    color: #f97316;
+}
+
+/*Search Modal*/
+
+.search_nav button{
+    justify-content: space-between;
+    width: 190px;
+    padding: 10px 16px;
+    color: rgb(219 225 232);
+    background-color: #2A3032;
+
+    border: 1px solid rgb(108 121 131);
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: filter 0.15s ease-in-out, border 0.2s ease;
+}
+
+.search_nav button span svg{
+    width: 17px;
+    fill: rgb(219 225 232);
+    margin-right: 8px;
+}
+
+#forward-slash_keybind{
+    border: 1px solid rgb(108 121 131);
+    border-radius: 5px;
+    width: 22px;
+    height: 22px;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+.search_nav button:hover{
+    border: 1px solid #9D00FF;
+    filter: drop-shadow(0 0 4px rgba(108, 121, 131, 0.9)); 
+}
+
+/*Login Btn*/
+
+.login_nav button{
+    color: var(--dark);
+    background-color: var(--light);
+    padding: 10px 16px;
+
+    transition: color 0.2s ease, background .2s ease;
+}
+
+.login_nav button:hover{
+    color: var(--light);
+    background-color: #9D00FF;
+}
+
+/*hero section*/
+
+section.hero{
+    height: 25vh;
+}
+
+h1{
+    color: var(--light);
+    font-size: 3.75rem;
+    text-transform: uppercase;
+    font-family: 'Cubano', sans-serif;
+}
+
+.hero_left p{
+    margin-top: 20px;
+    color: rgb(178, 190, 205);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+section.hero .hero_left,
+section.hero .hero_right{
+    flex-direction: column;
+    color: var(--light);
+    width: 50%;
+}
